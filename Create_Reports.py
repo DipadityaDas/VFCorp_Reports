@@ -25,7 +25,7 @@ def create_report() -> None:
 			# Read and concatenate the CSV files for the current prefix
 			df = pd.concat([pd.read_csv(file) for file in csv_files], ignore_index=True)
 			# Creating Blank Output excel file
-			output_excel_file = os.path.join(folder_path, f"report_{prefix}.xlsx")
+			output_excel_file = os.path.join(folder_path + '\\Reports', f"{prefix}_Onboarding_Report.xlsx")
 			# Converting csv file to excel file
 			df.to_excel(output_excel_file, index=False)
 			# Printing Logs
